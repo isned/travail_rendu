@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  frontend:
+    image: node:16
+    container_name: frontend
+    working_dir: /home/node/app
+    volumes:
+      - ./frontend:/home/node/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: npm start
+
